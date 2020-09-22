@@ -8,9 +8,14 @@ body {
 /* NAV */
 
 nav {
+  position: absolute;
+  top: 88px;
+  left: 0;
+  right: 0;
   width: 980px;
   height: 36px;
   margin: auto;
+  z-index: 1;
   border: 1px solid #666;
   border-radius: 3px;
   font-size: 12px;
@@ -79,25 +84,91 @@ nav li input {
 /* HEADER */
 
 header {
-  max-width: 1500px;
+  max-width: 1440px;
   min-width: 1000px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 540px 200px;
   gap: 3px;
-  background-color: rgb(255, 255, 225);
+}
+header section > a {
+  display: block;
+  height: 100%;
 }
 .hero {
+  position: relative;
   grid-column: 1 / -1;
-  background-color: rgb(255, 240, 211);
+  background: url("../images/your_verse_hero.jpg") 50% 100% no-repeat;
+}
+.hero > a {
+  display: block;
+  height: 100%;
+}
+.hero div {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 850px;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+}
+.hero h1 {
+  font-size: 60px;
+}
+.hero h2 {
+  font-size: 30px;
+}
+.hero div a {
+  margin-top: 30px;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+.hero div a:hover {
+  text-decoration: underline;
+}
+.hero div a img {
+  position: relative;
+  top: 15px;
+  height: 50px;
 }
 .iphone-s {
-  background-color: rgb(228, 255, 228);
+  background: url("../images/promo_iphone5s.jpg") no-repeat;
+}
+.iphone-c {
+  background: url("../images/promo_iphone5c.jpg") no-repeat;
 }
 .explore {
-  background-color: rgb(255, 212, 212);
+  background: url("../images/promo_30_years.jpg") no-repeat;
+}
+.responsibility {
+  background: url("../images/promo_supplier_responsibility.jpg") no-repeat;
 }
 
+/*
+<header>
+  <section class="hero">
+    <a href="link.html"></a>
+    <div>
+      <h1>What will your verse be?</h1>
+      <p>Everyone has something to share. See how people are using iPad in their unique ways to add to the world's story.</p>
+      <p><a href="link.html">Watch the "Your Verse" film and explore the stories</a></p>
+    </div>
+  </section>
+
+  <section class="iphone-s">
+    ...
+  <section class="iphone-c">
+    ...
+  <section class="explore">
+    ...
+  <section class="responsiblity">
+    ...
+</header>
 /* FOOTER */
 
 footer {
@@ -107,11 +178,7 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: baseline;
-  background-color: rgb(224, 224, 255);
 }
-/* footer > * {
-  padding-right: 50px;
-} */
 footer a {
   color: #08c;
   text-decoration: none;
@@ -134,32 +201,3 @@ footer img {
 footer .copyright span {
   color: #bbb;
 }
-
-/*
-<footer>
-  <div class="shop">
-    Shop the
-    <a>Apple Online Store</a>
-    (1-800-MY-APPLE), visit an
-    <a>Apple Retail Store</a>, 
-    or find a
-    <a>reseller</a>.
-  </div>
-  
-  <ul class="links">
-    <li><a href="link.html">Site Map</a></li>
-    <li> | <a href="link.html">Hot News</a></li>
-    <li> | <a href="link.html">RSS Feeds</a></li>
-    <li> | <a href="link.html">Media Info</a></li>
-    <li> | <a href="link.html">Environment</a></li>
-    <li> | <a href="link.html">Job Opportunities</a></li>
-    <li> | <a href="link.html">Contact Us</a></li>
-    <li> | <a href="link.html"><img src="images/usa.png" alt="Lots of Stars and Stripes"></a></li>
-  </ul>
-
-  <div class="copyright">
-    Copyright © 2014 Apple Inc. All rights reserved. 
-    <a href="link.html">Terms of Use</a> | 
-    <a href="link.html">Privacy Policy</a>
-  </div>
-</footer>
