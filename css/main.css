@@ -1,10 +1,7 @@
-img {
-  height: 20px;
-}
 body {
   box-sizing: border-box;
   font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   color: #666;
 }
 
@@ -15,9 +12,9 @@ nav {
   height: 36px;
   margin: auto;
   border: 1px solid #666;
-  border-radius: 3px
+  border-radius: 3px;
+  font-size: 12px;
 }
-
 nav ul {
   display: flex;
   height: 100%;
@@ -75,30 +72,10 @@ nav li input {
   border-radius: 10px;
   border: none;
   box-shadow: 0 2px 1px inset #444;
-  font-size: 12px;
   background: url("../images/magnifying-glass.png") 4px 80% no-repeat, linear-gradient(#777, #777 50%, #aaa 50%, #aaa);
   background-size: 12px;
 }
 
-/*
-url(../images/apple.png) 50% 50% 20px no-repeat
-<nav>
-  <ul>
-    <li><a href="link.html"><img src="images/apple.png" alt="Apple-logo"></a></li>
-    <li><a href="link.html">Store</a></li>
-    <li><a href="link.html">Mac</a></li>
-    <li><a href="link.html">iPod</a></li>
-    <li><a href="link.html">iPhone</a></li>
-    <li><a href="link.html">iPad</a></li>
-    <li><a href="link.html">iTunes</a></li>
-    <li><a href="link.html">Support</a></li>
-    <li>
-      <form>
-        <input type="text" name="search">
-      </form>
-    </li>
-  </ul>
-</nav>
 /* HEADER */
 
 header {
@@ -124,6 +101,65 @@ header {
 /* FOOTER */
 
 footer {
-  margin: 30px;
+  margin: 30px auto;
+  padding: 0 30px;
+  width: 1100px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: baseline;
   background-color: rgb(224, 224, 255);
 }
+/* footer > * {
+  padding-right: 50px;
+} */
+footer a {
+  color: #08c;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer ul {
+  text-align: right;
+  color: #bbb;
+  line-height: 3;;
+}
+footer li {
+  display: inline;
+}
+footer img {
+  position: relative;
+  top: 3px;
+}
+footer .copyright span {
+  color: #bbb;
+}
+
+/*
+<footer>
+  <div class="shop">
+    Shop the
+    <a>Apple Online Store</a>
+    (1-800-MY-APPLE), visit an
+    <a>Apple Retail Store</a>, 
+    or find a
+    <a>reseller</a>.
+  </div>
+  
+  <ul class="links">
+    <li><a href="link.html">Site Map</a></li>
+    <li> | <a href="link.html">Hot News</a></li>
+    <li> | <a href="link.html">RSS Feeds</a></li>
+    <li> | <a href="link.html">Media Info</a></li>
+    <li> | <a href="link.html">Environment</a></li>
+    <li> | <a href="link.html">Job Opportunities</a></li>
+    <li> | <a href="link.html">Contact Us</a></li>
+    <li> | <a href="link.html"><img src="images/usa.png" alt="Lots of Stars and Stripes"></a></li>
+  </ul>
+
+  <div class="copyright">
+    Copyright © 2014 Apple Inc. All rights reserved. 
+    <a href="link.html">Terms of Use</a> | 
+    <a href="link.html">Privacy Policy</a>
+  </div>
+</footer>
